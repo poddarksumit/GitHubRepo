@@ -1,0 +1,195 @@
+@CHARSET "ISO-8859-1";
+input {box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	padding: 8px;
+	 border: solid 1px #E5E5E5;
+	font: normal 12px Verdana, Tahoma, sans-serif;
+	 width: 200px;}
+.header-first-color {background-color :yellow; height: 14px;}
+.header-second-color {background-color :black; height: 9px;}
+.horizontal {border-style:solid; border-width:1px; margin-top: 6.2%}
+.home-body {width: 30%; float: left;}
+.middle-part{width: 100%;float: right;margin-top: 5px;}
+.map-location{border: 1px black solid;width: 69%; margin: 0 auto;margin-right: 0px;}
+.home-body-details {margin-left: 5%;}
+.home-body-details span,.login-parameters{font-style: normal;font-size:120%;font-family: "Franklin Gothic Medium"; }
+#intro-details{font-style: normal;font-size:100%;font-family: "Franklin Gothic Medium";margin-left:1%;}
+.my-location {margin-top: 1%;}
+#current-location  { margin-bottom: 1%; width:87.5%;}
+.provide-location  {color: black; margin-top: 1%;font-size: 120%; margin-bottom: 1%;margin-left:10%;}
+.my-destination {margin-top: 1%;margin-left:5%;}
+.my-vehicle-type{width: 90%;margin-left:5%}
+.my-name {margin-top: 1%;margin-left:5%}
+#myNameField {width: 90%;margin-left:5%;}
+.my-mobile-number {margin-top: 1%;margin-left:5%}
+#my-mobile-number {margin-left:5%;}
+#myMobileNumberField {width: 90px;}
+.my-price {width: 90%;margin-left:5%}
+.search-location { margin-top: 3%;right: 13px;margin-left:5%;}
+#searchTextField {width: 90%;margin-left:5%;}
+.seperator {border: 1px solid black;}
+.search-current-location,.search-dest-location {width: 90%;margin-left:5%;}
+#map_canvas,#directions {
+height: 556px;
+}
+.realPrice {width: 12%;}
+.imaginaryPrice {width: 5%;}
+.form .form-item.error-true input, .form .form-item.error-true textarea, .form .form-item.field-inputbutton.error-true input, .form .form-item input.error-true {
+    background: none repeat scroll 0 0 #F8EDD9;
+    border: 1px solid #A00028;
+    box-shadow: 3px 3px 8px 0 #DDD4C5 inset;
+}
+.form .form-item.error-true label, .form .form-item label.error-true {
+    color: #A00028;
+}
+.form .form-item .status {
+    display: block;
+}
+.form .form-item.field-inputbutton.error-true button {
+    border: 1px solid #A00028;
+}
+.error-message, .status label.error-true {
+    color: #A00028;
+    display: block !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left:5%;
+}
+.error-message span.icon {
+    margin-right: 5px;
+}
+.form .status label:before {
+    margin-right: 5px;
+}
+.status label.error-true {
+    display: block;
+}
+.status label.error-true:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.status label.error-true.valid, .form .form-item .status label.error-true.valid {
+    display: none !important;
+}
+.form-item.error-true {
+	 background: none repeat scroll 0 0 #F8EDD9;
+    border: 1px solid #A00028;
+    box-shadow: 3px 3px 8px 0 #DDD4C5 inset;
+}
+#current-location-field,#dest-location-field,.current-location-field,.dest-location-field,#distance-cal{ font-size: medium;color: black; important;}
+#final-current-location-remove,#final-dest-location-remove {margin-left: 70%;}
+.direction-marker{margin-left:5px;width:25px; }
+.search-location-div{height: 65px; width: 350px; margin-left: 5px;}
+#search-location-div{ width: 350px;}
+.direction-marker-div {height: 40px; width: 35px;}
+.location-details-div {margin-left: 40px; margin-top: -42px;}
+#process-request,#request-step-one {width:95%;margin-left:20px;text-align:center;margin-top: 1px;}
+.your-request{margin-top:2px;width: 100%;background-color: #FAF5F5;}
+.sign-in{margin-top:2px;width: 100%;background-color: #FAF5F5;}
+.submit-btn{ 
+	-moz-border-radius: 12px 12px 12px 12px; 
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-khtml-border-radius: 12px 12px 12px 12px; 
+	border-radius: 12px 12px 12px 12px;background-color: #E1DBFB;
+	width: auto;
+	 padding: 9px 15px;
+	 background: #617798;
+	 font-size: 14px;
+	 color: #FFFFFF;
+	 cursor:pointer;}
+.rigth-part{width:20%;float: right;}
+.left-part{float: left;width:75%;}
+.your-prev-request{margin-top: 5%; }
+#your-request-btn {text-align: center;float: left; width: 130px;margin-left: 15px;}
+#sign-in-btn {text-align: center;float: right; width: 120px;}
+.system-date-time-text{font-style: normal;font-family: "Franklin Gothic Medium";font-size: medium; }
+.cal-obj{width: 90%;margin-top: 1%;}
+.date-time{width:100%;}
+.system-date-time-text{width:35%;float: left;margin-top: 8px;}
+.system-date-time{width:60%; float: right;}
+.login-parameters-user-name{width: 45%;border: 1px solid black;float: left;}
+.login-parameters-user-pwd{width: 45%;border: 1px solid black;float:right;margin-left: 30px;}
+#login-btn{width: 30%}
+.user-name-txt{width: 30%;float: left;}
+.user-name{width: 30%;float: rigth;}
+.select-city{margin-top: 1%;margin-left:10%}
+#select-city{width: 100%;}
+select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url('/WebContent/media/images/select-arrow.png'), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	padding: 8px;
+	 border: solid 1px #E5E5E5;}
+#proceed-step_two{float: rigth;margin-left: 5%;}
+#confirmation-key{width:40%;float: right;}
+.location-details{width: 69%; margin: 0 auto;margin-right: 0px;}
+.confirmation-div{width: 60%; float: left;margin-top: .5%;}
+#confirm-phone-number {width: 220px; float: left;margin-left: 3%;}
+.error-slot {border: 1px solid red; width: 50%; margin-top: 2%;}
+.footer span{font-style: normal;font-size:80%;font-family: "Franklin Gothic Medium"; color: gray;}
+.session-expired-heading{color: #A00028;font-size: 16px;font-weight: bold; margin-bottom: 10px;font-family: "Franklin Gothic Medium";}
+.view-request {border: 1px solid black; width: 50%;}
+.view_request_details {border: 1px solid black; width: 220px; margin-left: 3%;float: left;}
+#view-request-button { margin-left: 5%; margin-top: 2px;}
+.view-request-phone-no {width: 200px;height: 10px;}
+.view-request-phone-no .error-true{margin-left: 3%;}
+.view-your-request{width: 100%;background-color: threedlightshadow;}
+.view-your-request-req-id {border-bottom: 1px solid activeborder;}
+.view-your-request div .view-your-request-heading{border-right: 1px solid activeborder;text-align: center;font-family: "Franklin Gothic Medium";
+	font-weight: bold;color: #672929;overflow: visible; padding : 2px;}
+.view-your-request div .view-your-request-value{font-family: "Franklin Gothic Medium";
+	font-style: normal;font-size: 2; overflow: visible;margin-left: 250px;margin-top: -20px;}
+.map-location-request{border: 1px black solid;width:100%; margin: 0 auto;margin-right: 0px;}
+#request-details{border: 1px solid #D5D5D5;width: 100%; margin-top: inherit; padding: 10px 0 ;position:relative;height: 180px;}
+ ul {
+    list-style: none outside none;
+    margin: 0;
+}
+#request-details ul li {
+    background-position: 0 25px !important;
+    border-left: 1px solid #D5D5D5;
+    float: left;
+    height: 150px;
+    margin: 0;
+    padding: 0 0 0 8px;
+    width: 200px;
+}
+#request-details ul li hr{
+    width: 170px;
+}
+#request-details ul li h4{
+    text-align: center;
+    overflow: auto;
+    font-family: "Franklin Gothic Medium";
+}
+#request-details ul li a{
+    text-align: center;
+    overflow: auto;
+    font-family: "Franklin Gothic Medium";
+}
+.request-details .requestDetailsLabel{color: #A00028;font-size: 16px;font-weight: bold; margin-bottom: 10px;font-family: "Franklin Gothic Medium";padding : 5px;}
+.request-details-div {margin: inherit;}
+.refresh-requests{margin-top: inherit;}

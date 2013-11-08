@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.password">system</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/xe</property>
+  <property name="hibernate.connection.username">system</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+  <property name="show_sql">true</property>
+  <property name="hibernate.c3p0.min_size">5</property>
+  <property name="hibernate.c3p0.max_size">20</property>
+  <property name="hibernate.c3p0.timeout">300</property>
+  <property name="hibernate.c3p0.idle_test_period">3000</property>
+  <property name="hibernate.show_sql">true</property>
+   <!--<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.cache.use_second_level_cache">true</property> -->
+  <mapping class="com.shpt.orm.archieve.Student" resource="com/shpt/orm/archieve/Student.hbm.xml"/>
+  <mapping class="com.shpt.bean.Address" resource="com/shpt/bean/Address.hbm.xml"/>
+  <mapping class="com.shpt.bean.User" resource="com/shpt/bean/User.hbm.xml"/>
+  <mapping class="com.shpt.bean.RequestDetails" resource="com/shpt/bean/RequestDetails.hbm.xml"/>
+  <mapping class="com.shpt.bean.TempUser" resource="com/shpt/bean/TempUser.hbm.xml"/>
+  <mapping class="com.shpt.shptRequesthandler.bean.RequestApproveBean" resource="com/shpt/shptRequesthandler/bean/RequestApproveBean.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
