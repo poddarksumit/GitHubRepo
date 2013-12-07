@@ -15,6 +15,7 @@ public class HelloWorld {
 	HelloWorldName propMsg = null;
 	String helloMsg = "";
 	String testing = "";
+	String testing1 = "";
 	String testing2 = "";
 
 	private HelloWorld(String message, HelloWorldName propMsg) {
