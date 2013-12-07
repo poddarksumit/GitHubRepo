@@ -35,7 +35,7 @@ public class HelloWorld {
 	}
 
 	public HelloWorldName getPropMsg() {
-		return propMsg; 
+		return propMsg;
 	}
 
 	public void setPropMsg(HelloWorldName propMsg) {
