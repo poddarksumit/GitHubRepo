@@ -14,6 +14,7 @@ public class HelloWorld {
 	String message = "";
 	HelloWorldName propMsg = null;
 	String helloMsg = "";
+	String testing = "";
 
 	private HelloWorld(String message, HelloWorldName propMsg) {
 		super();
