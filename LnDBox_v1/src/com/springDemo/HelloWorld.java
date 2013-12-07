@@ -16,11 +16,12 @@ public class HelloWorld {
 	String helloMsg = "";
 	String testing = "";
 	String testing1 = "";
+	String testing2 = "";
 
 	private HelloWorld(String message, HelloWorldName propMsg) {
 		super();
 		this.message = message;
-		this.propMsg = propMsg; 
+		this.propMsg = propMsg;
 	}
 
 	public String getMessage() {
