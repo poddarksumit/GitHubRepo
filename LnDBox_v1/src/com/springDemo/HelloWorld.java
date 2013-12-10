@@ -14,12 +14,16 @@ public class HelloWorld {
 	String message = "";
 	HelloWorldName propMsg = null;
 	String helloMsg = "";
-	String testing = "";
-	String testing1 = "";
-	String testing2 = "";
+	AOPPrintObject aopPrintObject = null;
 
-	private HelloWorld(String message, HelloWorldName propMsg) {
-		super();
+	/**
+	 * CGLIB has a restriction of having a default constructor.
+	 */
+	public HelloWorld() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public HelloWorld(String message, HelloWorldName propMsg) {
 		this.message = message;
 		this.propMsg = propMsg;
 	}
@@ -56,4 +60,13 @@ public class HelloWorld {
 	public void printHelloMsg() {
 		System.out.println("Hello Msg : " + getHelloMsg());
 	}
+
+	public AOPPrintObject getAopPrintObject() {
+		return aopPrintObject;
+	}
+
+	public void setAopPrintObject(AOPPrintObject aopPrintObject) {
+		this.aopPrintObject = aopPrintObject;
+	}
+
 }

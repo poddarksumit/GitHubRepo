@@ -21,8 +21,7 @@ public class HelloWorldName {
 		this.name = name;
 	}
 
-	private HelloWorldName(String name) {
-		super();
+	public HelloWorldName(String name) {
 		this.name = name;
 	}
 
