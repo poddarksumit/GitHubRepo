@@ -23,7 +23,7 @@ public class HomePageController extends AbstractController {
 
 	}
 
-	Student student = new Student();
+	//Student student = new Student();
 
 	/*
 	 * (non-Javadoc)
@@ -36,15 +36,15 @@ public class HomePageController extends AbstractController {
 	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
-		return new ModelAndView("home","std", "HELLO");
+		ModelAndView model = new ModelAndView("index");
+		model.addObject("msg", "hello world. i am back and this is your favorite Smatty - Samz");
+		return model;
 	}
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
+	/*
+	 * public Student getStudent() { return student; }
+	 * 
+	 * public void setStudent(Student student) { this.student = student; }
+	 */
 
 }

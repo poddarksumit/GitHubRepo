@@ -4,7 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<import resource="../config/springDemo/student-spring.xml" />
 	<bean name="/home.htm" class="com.springDemo.HomePageController">
-		<property name="student" ref="stud-manish"></property>
 	</bean>
-	
+	<bean id="viewResolver"
+    	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
 </beans>
