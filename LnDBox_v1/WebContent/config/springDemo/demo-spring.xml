@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<bean id="printObject" class="com.springDemo.AOPPrintObject">
+		<property name="msg" value="calling object from helloworld"></property>
+	</bean>
+
+	<bean id="helloworld" class="com.springDemo.HelloWorld">
+		<constructor-arg value="Hi and hello world"></constructor-arg>
+		<constructor-arg>
+			<bean class="com.springDemo.HelloWorldName">
+				<constructor-arg value="Sumit"></constructor-arg>
+			</bean>
+		</constructor-arg>
+		<property name="helloMsg" value="Hello Sexy !!!"></property>
+	</bean>
+
+	<bean id="helloworldII" class="com.springDemo.HelloWorld">
+		<constructor-arg value="Hello world"></constructor-arg>
+		<constructor-arg>
+			<bean class="com.springDemo.HelloWorldName">
+				<constructor-arg value="Sumit Poddar"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	<aop:config>
+		<aop:aspect ref="printObject">
+			<aop:pointcut id="helloWorldPointCut"
+				expression="execution(* com.springDemo.HelloWorld.printHelloMsg(..))"/>
+			<aop:before method="printBefore" pointcut-ref="helloWorldPointCut"
+				arg-names="bean"></aop:before>
+			<aop:after method="printAfter" pointcut-ref="helloWorldPointCut"
+				arg-names="bean"></aop:after>
+		</aop:aspect>
+	</aop:config>
+
+</beans>

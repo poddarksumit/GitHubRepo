@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="member-spring-aop.xml" />
+
+	<bean id="member-teacher" class="com.springDemo.Member">
+		<property name="type" value="teacher"></property>
+	</bean>
+
+	<bean id="teacher-manish" class="com.springDemo.Teacher" parent="member-teacher">
+			<property name="salary" value="3.5"></property>
+	</bean>
+</beans>

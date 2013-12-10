@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	<!-- <import resource="class-spring.xml" /> -->
+	<!-- <import resource="subject-spring.xml" />-->
+
+	<bean id="student-aop" class="com.springDemo.StudentAOP">
+		<!-- <property name="clsList" ref="classObject"></property>
+		<property name="subList" ref="subObjList"></property>-->
+	</bean>
+
+	<!-- <bean id="propertyConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>http://localhost:8080/lndbox/config/springDemo/demo.properties</value>
+		</property>
+	</bean> -->
+
+	<bean id="beanCounter" class="com.springDemo.BeanCounter"></bean>
+	<bean id="uniqIdGen" class="com.springDemo.UniqueIdGen">
+	</bean>
+
+	<bean id="member-stud" class="com.springDemo.Member" abstract="true">
+		<property name="type" value="student"></property>
+		<!-- <property name="schoolName" value="${member.schoolname}"></property>  -->
+		<property name="schoolName" value="Summer School"></property> 
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.springDemo.PhoneNumber">
+					<bean id="phoneEditor" class="com.springDemo.PhoneNumberEditor"></bean>
+				</entry>
+				<entry key="com.springDemo.Address">
+					<bean id="addressEditor" class="com.springDemo.AddressValueEditor"></bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="stud-manish" class="com.springDemo.Student" parent="member-stud">
+		<constructor-arg value="72.2"></constructor-arg>
+		<constructor-arg value="15"></constructor-arg>
+		<property name="phoneNo" value="011-2271-1905"></property>
+		<property name="age" value="12"></property>
+		<property name="name" value="Manish Sharma"></property>
+		<property name="classOfStd">
+			<bean class="com.springDemo.ClassObj">
+				<constructor-arg value="2"></constructor-arg>
+				<constructor-arg value="B"></constructor-arg>
+			</bean>
+		</property>
+		<property name="address"
+			value="154F:Garud Apprt:Mayur Vihar. Phase I:Delhi:110091">
+		</property>
+		<replaced-method name="getId" replacer="uniqIdGen"></replaced-method>
+	</bean>
+
+	<bean id="stud-sumit" class="com.springDemo.Student" parent="member-stud">
+		<constructor-arg value="65.1"></constructor-arg>
+		<constructor-arg value="35"></constructor-arg>
+		<property name="phoneNo" value="011-2271-1915"></property>
+		<property name="age" value="12"></property>
+		<property name="name" value="Sumit Pandey"></property>
+		<property name="classOfStd">
+			<bean class="com.springDemo.ClassObj">
+				<constructor-arg value="8"></constructor-arg>
+				<constructor-arg value="B"></constructor-arg>
+			</bean>
+		</property>
+		<property name="address">
+			<bean class="com.springDemo.Address">
+				<constructor-arg value="154F"></constructor-arg>
+				<constructor-arg value="Garud Apprt"></constructor-arg>
+				<constructor-arg value="Mayur Vihar. Phase I"></constructor-arg>
+				<constructor-arg value="Delhi"></constructor-arg>
+				<constructor-arg value="110091"></constructor-arg>
+			</bean>
+		</property>
+		<replaced-method name="getId" replacer="uniqIdGen"></replaced-method>
+	</bean>
+
+	<!-- AOP config 
+	<bean id="stud-sumit-1" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="stud-sumit-target"></property>
+		<property name="interceptorNames" value="student-aop"></property>
+		<property name="proxyInterfaces" value="com.springDemo.ClassAopInterface"></property>
+	</bean>
+	<bean id="stud-manish-2" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="stud-manish-target"></property>
+		<property name="interceptorNames" value="student-aop"></property>
+		<property name="proxyInterfaces" value="com.springDemo.ClassAopInterface"></property>
+	</bean>
+	
+	
+	<aop:config>
+		<aop:aspect id="aopForClass" ref="student-aop">
+			<aop:pointcut id="classAOPPointCut"
+				expression="execution(* com.springDemo.Student.setClassOfStd(..)) and this(classOfStd)"/>
+			<aop:before method="verifyClassEntered" pointcut-ref="classAOPPointCut"></aop:before>
+		</aop:aspect>
+	</aop:config>-->
+</beans>

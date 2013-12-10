@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="subObjList" class="com.springDemo.Subject">
+		<constructor-arg>
+			<map merge="true">
+				<entry key="english" value-ref="english"></entry>
+				<entry key="hindi" value-ref="hindi"></entry>
+				<entry key="maths" value-ref="maths"></entry>
+				<entry key="science" value-ref="science"></entry>
+				<entry key="social studies" value-ref="social studies"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="english" class="com.springDemo.SubjectObj">
+		<constructor-arg value="english"></constructor-arg>
+		<constructor-arg value="ENG"></constructor-arg>
+	</bean>
+	<bean id="hindi" class="com.springDemo.SubjectObj">
+		<constructor-arg value="hindi"></constructor-arg>
+		<constructor-arg value="HIN"></constructor-arg>
+	</bean>
+	<bean id="maths" class="com.springDemo.SubjectObj">
+		<constructor-arg value="maths"></constructor-arg>
+		<constructor-arg value="MAT"></constructor-arg>
+	</bean>
+	<bean id="science" class="com.springDemo.SubjectObj">
+		<constructor-arg value="science"></constructor-arg>
+		<constructor-arg value="SCI"></constructor-arg>
+	</bean>
+	<bean id="social studies" class="com.springDemo.SubjectObj">
+		<constructor-arg value="social studies"></constructor-arg>
+		<constructor-arg value="SOC_STD"></constructor-arg>
+	</bean>
+</beans>

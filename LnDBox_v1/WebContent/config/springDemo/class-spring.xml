@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="classObject" class="com.springDemo.Class">
+		<constructor-arg>
+			<map>
+				<entry key="1A" value-ref="one_a"></entry>
+				<entry key="1B" value-ref="one_b"></entry>
+				<entry key="2A" value-ref="two_a"></entry>
+				<entry key="2B" value-ref="two_b"></entry>
+				<entry key="3A" value-ref="three_a"></entry>
+				<entry key="3B" value-ref="three_b"></entry>
+			</map>
+		</constructor-arg>
+
+	</bean>
+
+	<bean id="one_a" class="com.springDemo.ClassObj">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+	</bean>
+	<bean id="one_b" class="com.springDemo.ClassObj">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+	</bean>
+	<bean id="two_a" class="com.springDemo.ClassObj">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+	</bean>
+	<bean id="two_b" class="com.springDemo.ClassObj">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+	</bean>
+	<bean id="three_a" class="com.springDemo.ClassObj">
+		<constructor-arg value="3"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+	</bean>
+	<bean id="three_b" class="com.springDemo.ClassObj">
+		<constructor-arg value="3"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+	</bean>
+</beans>
